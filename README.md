@@ -42,7 +42,7 @@ container-create-child --profile acme-consumer root consumer
 
 Consumer will poll and invoke service every 3s. Check `data/log/karaf.log` (for standalone variant) or `instances/consumer/data/log/karaf.log` (for distributed).
 
-Distributed version should fail with `ClassNotFound` exception. E.g:
+Distributed version will fail with `ClassNotFound` exception. E.g:
 ```no-highlight
 Caused by: java.lang.ClassNotFoundException: com.acme.producer.model.NestedEntity not found by com.acme.consumer [83]
 	at org.apache.felix.framework.BundleWiringImpl.findClassOrResourceByDelegation(BundleWiringImpl.java:1532)
